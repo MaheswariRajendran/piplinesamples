@@ -11,9 +11,7 @@ node {
     								url: 'https://github.com/MaheswariRajendran/test-maven']]])
     								
     stage('Build') {
-    	build 'chapter-6'
-    	bat 'mkdir testBuild'
-    	archiveArtifacts allowEmptyArchive: true, artifacts: 'chapter-6', fingerprint: true, onlyIfSuccessful: true
+    	
     	
     }
     
