@@ -16,8 +16,7 @@ node {
     }
     
      stage('Test') {
-    
-             junit  testResults: 'C:/Users/RAJE003/.jenkins/workspace/chapter-6/test_jenkins_maven/target/surefire-reports/*.xml'
+                 junit  testResults: 'C:/Users/RAJE003/.jenkins/workspace/chapter-6/test_jenkins_maven/target/surefire-reports/*.xml'
      
      }
     
