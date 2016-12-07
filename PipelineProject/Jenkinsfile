@@ -17,7 +17,9 @@ node {
     
      stage('Test') {
     
-     junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+     #junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+          junit  testResults: '**/target/surefire-reports/*.xml'
+     
      }
     
     
