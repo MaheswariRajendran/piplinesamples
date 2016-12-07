@@ -18,8 +18,13 @@ node {
     }
     
      stage('Test') {
-                 junit  testResults: 'C:/Users/RAJE003/.jenkins/workspace/chapter-6/test_jenkins_maven/target/surefire-reports/*.xml'
+                 junit  allowEmptyResults: true,testResults: 'C:/Users/RAJE003/.jenkins/workspace/chapter-6/test_jenkins_maven/target/surefire-reports/*.xml'
      
+     }
+     
+     stage('deploy'){
+     
+     	bat '''mvn deploy'''
      }
     
     
