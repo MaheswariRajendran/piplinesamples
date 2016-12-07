@@ -12,6 +12,8 @@ node {
     								
     stage('Build') {
     	build 'chapter-6'
+    	mkdir 'testBuild'
+    	archiveArtifacts allowEmptyArchive: true, artifacts: 'chapter-6', fingerprint: true, onlyIfSuccessful: true
     	
     }
     
