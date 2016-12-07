@@ -22,7 +22,7 @@ node {
      
      stage('deploy'){
      
-     	bat '''mvn deploy'''
+     	bat '/test_jenkins_maven mvn verify'
      }
     
     
