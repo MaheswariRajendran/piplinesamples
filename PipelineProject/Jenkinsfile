@@ -15,6 +15,10 @@ node {
     	
     }
     
+     stage('Test') {
+     bat 'make check || true'
+     junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+     }
     
     
 }
