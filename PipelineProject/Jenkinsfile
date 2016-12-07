@@ -1,4 +1,20 @@
 #!groovy
 node {
     echo 'Hallo'
+    checkout scm
+    checkout([$class: 'GitSCM', 
+    			branches: [[name: '*/master']], 
+    			doGenerateSubmoduleConfigurations: false, 
+    			extensions: [], 
+    			submoduleCfg: [], 
+    			userRemoteConfigs: [[credentialsId: '16d61fc2-c8a0-4d2c-a9c6-d3c25273d193', 
+    								url: 'https://github.com/MaheswariRajendran/test-maven']]])
+    								
+    stage('Build') {
+    	build 'chapter-6'
+    	
+    }
+    
+    
+    
 }
